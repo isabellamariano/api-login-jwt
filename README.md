@@ -44,8 +44,8 @@ Configure as variáveis de ambiente: Crie um arquivo .env na raiz do projeto con
 
 PORT=3000<br/>
 HOST=http://localhost:4200<br/>
-JWT_SECRET=sua_chave_secreta<br/>
-REFRESH_TOKEN_SECRET=outra_chave_secreta<br/>
+SECRET=sua_chave_secreta<br/>
+SECRET_SERV=outra_chave_secreta<br/>
 
 Iniciar o projeto
 
