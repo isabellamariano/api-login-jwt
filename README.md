@@ -60,7 +60,7 @@ Lá você encontrará todos os endpoints, parâmetros necessários e exemplos de
 
 ## 📂 Estrutura de Pastas
 
-├── src
+├── src<br/>
 │ ├── config # Constantes e utilitários<br/>
 │ ├── controllers # Orquestração das requisições (req, res)<br/>
 │ ├── interfaces # Definições de tipos e interfaces TypeScript<br/>
