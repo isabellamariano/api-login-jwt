@@ -55,24 +55,24 @@ ng serve
 
 ## 📖 Documentação da API
 
-Após iniciar o servidor, a documentação interativa estará disponível em: 👉 http://localhost:3000/api-docs
+Após iniciar o servidor, a documentação interativa estará disponível em: 👉 http://localhost:3000/api-docs<br/>
 Lá você encontrará todos os endpoints, parâmetros necessários e exemplos de resposta.
 
 ## 📂 Estrutura de Pastas
 
 ├── src
-│ ├── config # Constantes e utilitários
-│ ├── controllers # Orquestração das requisições (req, res)
-│ ├── interfaces # Definições de tipos e interfaces TypeScript
-│ ├── middleware # Filtros, segurança e validadores
-│ ├── models # Definições de schemas e interação direta com o banco
-│ ├── routes # Definição dos caminhos da API e documentação Swagger
-│ ├── services # Regras de negócio complexas e integração com APIs externas
-│ ├── app.ts # Configuração central do Express
-├── .env # Configurações sensíveis (Ignorado pelo Git)
-├── .gitignore # Definição de arquivos que não vão para o repositório
-├── server.ts # Ponto de entrada que inicia o servidor HTTP
-└── tsconfig.json # Configurações do compilador TypeScript
+│ ├── config # Constantes e utilitários<br/>
+│ ├── controllers # Orquestração das requisições (req, res)<br/>
+│ ├── interfaces # Definições de tipos e interfaces TypeScript<br/>
+│ ├── middleware # Filtros, segurança e validadores<br/>
+│ ├── models # Definições de schemas e interação direta com o banco<br/>
+│ ├── routes # Definição dos caminhos da API e documentação Swagger<br/>
+│ ├── services # Regras de negócio complexas e integração com APIs externas<br/>
+│ ├── app.ts # Configuração central do Express<br/>
+├── .env # Configurações sensíveis (Ignorado pelo Git)<br/>
+├── .gitignore # Definição de arquivos que não vão para o repositório<br/>
+├── server.ts # Ponto de entrada que inicia o servidor HTTP<br/>
+└── tsconfig.json # Configurações do compilador TypeScript<br/>
 
 ## 🤝 Contribuindo
 
