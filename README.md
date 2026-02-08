@@ -25,7 +25,7 @@ Siga os passos abaixo para configurar o projeto localmente.
 Abra o seu terminal e digite:
 
 ```bash
-git clone [https://github.com/isabellamariano/api-login-jwt.git](https://github.com/isabellamariano/api-login-jwt.git)
+git clone https://github.com/isabellamariano/api-login-jwt.git
 ```
 
 Entrar na pasta do projeto
@@ -42,10 +42,10 @@ npm install
 
 Configure as variáveis de ambiente: Crie um arquivo .env na raiz do projeto conforme o .env.example:
 
-PORT=3000
-HOST=http://localhost:4200
-JWT_SECRET=sua_chave_secreta
-REFRESH_TOKEN_SECRET=outra_chave_secreta
+PORT=3000<br/>
+HOST=http://localhost:4200<br/>
+JWT_SECRET=sua_chave_secreta<br/>
+REFRESH_TOKEN_SECRET=outra_chave_secreta<br/>
 
 Iniciar o projeto
 
