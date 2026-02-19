@@ -1,0 +1,142 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "nome": "Emily",
+            "sobrenome": "Johnson",
+            "usuario": "emilyj",
+            "senha": "emilyj999",
+            "dataNascimento": "1996-05-30",
+            "email": "emily.johnson@exemplo.com.br",
+            "endereco": {
+                "logradouro": "Avenida Paulista, 1000",
+                "cidade": "São Paulo",
+                "estado": "São Paulo",
+                "uf": "SP",
+                "cep": "01310-100",
+                "coordenadas": {
+                    "lat": -23.5611,
+                    "lng": -46.6559
+                },
+                "pais": "Brasil"
+            },
+            "role": "admin",
+            "status": "active"
+        },
+        {
+            "id": 2,
+            "nome": "Michael",
+            "sobrenome": "Williams",
+            "usuario": "michaelw",
+            "senha": "michaelw999",
+            "dataNascimento": "1989-08-10",
+            "email": "michael.williams@exemplo.com.br",
+            "endereco": {
+                "logradouro": "Rua da Alfândega, 50",
+                "cidade": "Rio de Janeiro",
+                "estado": "Rio de Janeiro",
+                "uf": "RJ",
+                "cep": "20070-000",
+                "coordenadas": {
+                    "lat": -22.9035,
+                    "lng": -43.1758
+                },
+                "pais": "Brasil"
+            },
+            "role": "admin",
+            "status": "active"
+        },
+        {
+            "id": 6,
+            "nome": "Olivia",
+            "sobrenome": "Wilson",
+            "usuario": "oliviaw",
+            "senha": "oliviaw999",
+            "dataNascimento": "2002-04-20",
+            "email": "olivia.wilson@exemplo.com.br",
+            "endereco": {
+                "logradouro": "Rua Bahia, 450",
+                "cidade": "Belo Horizonte",
+                "estado": "Minas Gerais",
+                "uf": "MG",
+                "cep": "30160-010",
+                "coordenadas": {
+                    "lat": -19.9245,
+                    "lng": -43.9352
+                },
+                "pais": "Brasil"
+            },
+            "role": "moderador",
+            "status": "active"
+        },
+        {
+            "id": 7,
+            "nome": "Alexander",
+            "sobrenome": "Jones",
+            "usuario": "alexj",
+            "senha": "alexj999",
+            "dataNascimento": "1986-10-20",
+            "email": "alexander.jones@exemplo.com.br",
+            "endereco": {
+                "logradouro": "Avenida Sete de Setembro, 2500",
+                "cidade": "Curitiba",
+                "estado": "Paraná",
+                "uf": "PR",
+                "cep": "80230-010",
+                "coordenadas": {
+                    "lat": -25.4397,
+                    "lng": -49.2689
+                },
+                "pais": "Brasil"
+            },
+            "role": "moderador",
+            "status": "active"
+        },
+        {
+            "id": 16,
+            "nome": "Avery",
+            "sobrenome": "Perez",
+            "usuario": "averyp",
+            "senha": "averyp999",
+            "dataNascimento": "1999-03-10",
+            "email": "avery.perez@exemplo.com.br",
+            "endereco": {
+                "logradouro": "Rua dos Andradas, 1200",
+                "cidade": "Porto Alegre",
+                "estado": "Rio Grande do Sul",
+                "uf": "RS",
+                "cep": "90020-008",
+                "coordenadas": {
+                    "lat": -30.0325,
+                    "lng": -51.2304
+                },
+                "pais": "Brasil"
+            },
+            "role": "usuario",
+            "status": "active"
+        },
+        {
+            "id": 17,
+            "nome": "Evelyn",
+            "sobrenome": "Sanchez",
+            "usuario": "evelyns",
+            "senha": "evelyns999",
+            "dataNascimento": "1987-10-13",
+            "email": "evelyn.sanchez@exemplo.com.br",
+            "endereco": {
+                "logradouro": "Avenida Boa Viagem, 300",
+                "cidade": "Recife",
+                "estado": "Pernambuco",
+                "uf": "PE",
+                "cep": "51011-000",
+                "coordenadas": {
+                    "lat": -8.1132,
+                    "lng": -34.8878
+                },
+                "pais": "Brasil"
+            },
+            "role": "usuario",
+            "status": "active"
+        }
+    ]
+}

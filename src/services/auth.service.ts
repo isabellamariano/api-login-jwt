@@ -5,7 +5,7 @@ import {
   refreshResponse,
 } from "../interfaces/auth.interface";
 import { jwtPayload } from "../interfaces/jwtPayload.interface";
-import { userLoginResponse } from "../interfaces/user.interface";
+import { userResponse } from "../interfaces/user.interface";
 import * as userModel from "../models/user.model";
 
 export async function getLogin(param: loginRequest): Promise<loginResponse> {
@@ -13,16 +13,16 @@ export async function getLogin(param: loginRequest): Promise<loginResponse> {
     throw new Error("Usuário/Senha são obrigatórios");
   }
 
-  const resp = (await userModel.checkUser(param)) as userLoginResponse;
+  const resp = (await userModel.checkUser(param)) as userResponse;
 
   if (!resp.status) {
-    throw new Error(resp.status_descricao || "Usuário não encontrado.");
+    throw new Error(resp.status_descricao || "Usuário Não Encontrado");
   }
 
   const payload: jwtPayload = {
     id: resp.user.id,
     usuario: resp.user.usuario,
-    roles: ["ADMIN"],
+    roles: [resp.user.role],
   };
   const payload2 = {
     id: resp.user.id,
@@ -48,22 +48,25 @@ export async function refreshToken(rftk: string): Promise<refreshResponse> {
 
   const rtk = utils.validaRTK(rftk);
 
-  const resp = (await userModel.findById(rtk.id)) as userLoginResponse;
+  const resp = (await userModel.findById(rtk.id)) as userResponse;
   if (!resp.status) {
-    throw new Error("Usuário não encontrado");
+    throw new Error("Usuário Não Encontrado");
   }
 
-  if (resp.user.situacao === "suspended") {
+  if (resp.user.status === "suspended") {
     throw new Error("Conta suspensa/inativa. Entre em contato com o suporte.");
   }
 
   const payload: jwtPayload = {
     id: resp.user.id,
     usuario: resp.user.usuario,
-    roles: ["ADMIN"],
+    roles: [resp.user.role],
   };
 
   const token = utils.createToken(payload);
+  if (token) {
+    resp.status_descricao = "Token Atualizado";
+  }
 
   return {
     status: resp.status,

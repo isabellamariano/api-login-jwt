@@ -1,16 +1,18 @@
+import usersRaw from "../data/usersDummy.json";
 import { loginRequest } from "../interfaces/auth.interface";
-import { userLoginResponse } from "../interfaces/user.interface";
+import { User, userResponse } from "../interfaces/user.interface";
+
+const users = usersRaw.usuarios as User[];
 
 export async function checkUser(
   param: loginRequest,
-): Promise<userLoginResponse> {
-  if (param.usuario === "tester" && param.senha === "12345") {
+): Promise<userResponse> {
+
+  const response = users.find(f => f.usuario === param.usuario && f.senha === param.senha);
+
+  if (response && response.status === "active") {
     return {
-      user: {
-        id: "234DDDs3###",
-        usuario: "tester",
-        situacao: "ativo",
-      },
+      user: response,
       status: true,
       status_descricao: "Deu certo!",
     };
@@ -18,18 +20,15 @@ export async function checkUser(
 
   return {
     status: false,
-    status_descricao: "Credenciais inválidas",
+    status_descricao: "Credenciais Inválidas",
   };
 }
 
-export async function findById(id: string): Promise<userLoginResponse> {
-  if (id === "234DDDs3###") {
+export async function findById(id: number): Promise<userResponse> {
+  const response = users.find((u) => u.id === id);
+  if (response) {
     return {
-      user: {
-        id: "234DDDs3###",
-        usuario: "tester",
-        situacao: "ativo",
-      },
+      user: response,
       status: true,
       status_descricao: "Deu certo!",
     };
@@ -37,6 +36,6 @@ export async function findById(id: string): Promise<userLoginResponse> {
 
   return {
     status: false,
-    status_descricao: "Credenciais inválidas",
+    status_descricao: "Credenciais Inválidas",
   };
 }
